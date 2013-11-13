@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------------*/
+/*  2.  Header Styles
+/*-----------------------------------------------------------------------------------*/
+
+#logo {
+    margin-bottom: 0;
+    padding-bottom: 1.786em;
+}
+
+#logo,
+#logo a {
+    font-family: 'Patua One', Georgia, serif;
+  color: #2c2f32;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#logo a {
+  font-size: 40px;
+  line-height: 1.2em;
+  letter-spacing: 0.2em;
+}
+
+#logo a:hover {
+    color: #ea4848;
+    text-decoration: none;
+}
+
+#tagline {
+  color: #A7A7A7;
+  font-size: 13px;
+  line-height: 1.385em;
+  font-weight: normal;
+  margin: 0.3em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+

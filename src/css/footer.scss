@@ -1,0 +1,104 @@
+/*-----------------------------------------------------------------------------------*/
+/*  8. Footer Styles
+/*-----------------------------------------------------------------------------------*/
+
+#footer {
+  background: transparent url(images/bg-footer.jpg) repeat;
+    border-top: 4px solid #0a0c0e;
+    color: #A7A7A7;
+    -webkit-box-shadow: 0 -4px 0 rgba(0,0,0,.1);
+            box-shadow: 0 -4px 0 rgba(0,0,0,.1);
+}
+
+#footer .widget-title { color: #fff; }
+
+#footer a {
+    color: #ebebec;
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -ms-transition: color .1s linear;
+    -o-transition: color .1s linear;
+    transition: color .1s linear;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: #ea4848;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+}
+
+.footer-col-3 { margin-right: 0; }
+
+#footer .widget > ul a {
+    background: #22272d;
+    color: #A7A7A7;
+}
+
+#footer .widget > ul li { background: #22272d; }
+
+#footer .widget > ul a:hover { color: #ea4848; }
+
+#footer .zilla-tweet-widget > ul li {
+    background: transparent;
+    border-top: 1px solid #22272D;
+    color: #A7A7A7;
+    padding: 0.8em 0;
+}
+
+#footer .zilla-tweet-widget > ul li:first-child {
+  border: none;
+  padding-top: 0;
+}
+
+#footer .zilla-tweet-widget > ul a {
+    background: transparent;
+    color: #fff;
+}
+
+#footer .zilla-tweet-widget li .twitter-time-stamp { color: #414244; }
+
+#footer .twitter-link {
+    background: #22272d;
+    border-color: #22272d;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+}
+
+.footer-lower {
+    background: #151619;
+    font-family: 'Patua One', Georgia, serif;
+    text-transform: uppercase;
+}
+
+.footer-inner {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 4.375em 0 5em;
+    width: 940px;
+}
+
+.footer-lower .footer-inner { padding: 1.875em 0; }
+
+.copyright,
+.credit {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.copyright {
+    float: left;
+    margin-left: 2.127659574%; /* 20px */
+}
+
+.credit {
+    float: right;
+    margin-right: 2.127659574%; /* 20px */
+}

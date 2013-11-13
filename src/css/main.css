@@ -1,0 +1,46 @@
+/*-----------------------------------------------------------------------------------
+
+  Theme Name: Hoarder
+  Theme URI: http://www.themezilla.com/themes/hoarder
+  Description: A theme for collecting internet things.
+  Author: ThemeZilla
+  Author URI: http://www.themezilla.com
+  Version: 1.2
+
+-----------------------------------------------------------------------------------
+
+  0.  CSS Reset & Clearfix
+  1.  Document Setup (body, common classes, vertical rhythm, structure etc)
+  2.  Header Styles
+  3.  Navigation & Menus
+  4.  Main Content Styles
+  5.  Post Content Styles
+  6.  Comments
+  7.  Pagination
+  8.  Footer Styles
+  9.  Page & Page Templates
+  10. Widgets
+  11. Zilla Plugins
+  12. Little screens
+
+-----------------------------------------------------------------------------------*/
+
+/* Get a real font, not an http call */
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+@import "modules/reset";
+@import "modules/basics";
+
+@import "modules/header";
+@import "modules/nav";
+@import "modules/main-content";
+@import "modules/post-content";
+@import "modules/comments";
+@import "modules/pagination";
+@import "modules/footer";
+@import "modules/page";
+
+@import "modules/zilla-plugins";
+@import "modules/skins";
+
+@import "modules/media-queries";

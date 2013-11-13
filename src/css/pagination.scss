@@ -1,0 +1,103 @@
+/*-----------------------------------------------------------------------------------*/
+/*  7. Pagination
+/*-----------------------------------------------------------------------------------*/
+
+.navigation {
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.page-template-template-home-2col-php .navigation,
+.blog .page-navigation {
+    bottom: 0;
+    left: 40.5%;
+    position: absolute;
+    width: 130px;
+}
+
+.blog .page-navigation { left: 415px; }
+
+.page-navigation {
+    clear: left;
+    margin: 0 auto;
+    width: 130px;
+}
+
+#load-more {
+    background: #fff;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    clear: left;
+    color: #414244;
+    display: block;
+    font-family: 'Patua One', Georgia, serif;
+    font-size: 15px;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.page-template-template-home-blog-php #load-more,
+.page-template-template-home-2col-php #load-more,
+.archive #load-more,
+.search #load-more {
+    bottom: 3px;
+    margin-left: 10px;
+    position: absolute;
+    width: 620px;
+}
+
+.blog #load-more {
+    bottom: 3px;
+    left: 0;
+    margin-left: 10px;
+    position: absolute;
+    width: 940px;
+}
+
+#load-more:hover {
+    text-decoration: none;
+    color: #ea4848;
+}
+
+.page-navigation .nav-next { float: left; }
+
+.page-navigation .nav-next a {
+    background: transparent url(images/sprite.png) 0 -155px no-repeat;
+    border: none;
+    display: block;
+    height: 60px;
+    text-indent: -999em;
+    width: 60px;
+}
+
+.page-navigation .nav-next a:hover { background-position: 0 -215px; }
+
+.page-navigation .nav-previous a {
+    background: transparent url(images/sprite.png) 0 -275px no-repeat;
+    border: none;
+    display: block;
+    height: 60px;
+    text-indent: -999em;
+    width: 60px;
+}
+
+.page-navigation .nav-previous a:hover { background-position: 0 -335px; }
+
+.page-navigation .nav-previous { float: right; }
+
+.single-page-navigation .nav-next { float: right; }
+
+.single-page-navigation .nav-previous { float: left; }
+
+.comment-navigation {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-next { float: right; }
+
+.comment-navigation .nav-previous { float: left; }
+
+

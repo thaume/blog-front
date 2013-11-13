@@ -1,0 +1,374 @@
+/*----------------------------------------------------------------------------------*/
+/*  13. Media queries
+/*----------------------------------------------------------------------------------*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 640px) {
+
+  body { -webkit-text-size-adjust: none; }
+
+}
+
+/* Mobile Menu ------------------------------ */
+@media only screen and (max-width: 960px) {
+
+    .main-navigation {
+        background: #202222;
+        border-bottom: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+  box-sizing: content-box;
+    }
+
+    #primary-nav {
+        height: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    #primary-menu { display: none; }
+
+    #primary-nav #searchform { display: none; }
+
+    #zilla-menu-dropdown {
+      background: transparent url(images/menu-icon.gif) 0 0 no-repeat;
+      border-bottom: none;
+      cursor: pointer;
+      display: block;
+      margin-top: 20px;
+      position: absolute;
+      height: 28px;
+      left: 6px;
+      top: -48px;
+      width: 40px;
+  }
+
+  #primary-nav #zilla-mobile-menu {
+      background: #202222;
+      margin: 0;
+      padding: 10px 0 10px 10px;
+  }
+
+  ul#zilla-mobile-menu ul { padding: 0; }
+
+  #zilla-mobile-menu li {
+      border: none !important;
+      display: block;
+      float: none !important;
+  }
+
+    #zilla-mobile-menu li a {
+        border: none;
+        color: #fff;
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+
+    #primary-nav ul li.sfHover > a,
+    #primary-nav ul li.current-cat > a,
+    #primary-nav ul li.current_page_item > a,
+    #primary-nav ul li.current-menu-item > a { border: none; }
+
+  #zilla-mobile-menu li a:hover { border: none; }
+
+  #zilla-mobile-menu li a:hover .sub-menu { margin: 0; }
+
+  #zilla-mobile-menu ul.sub-menu {
+      background: transparent;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      font-family: 'Patua One', Georgia, serif;
+      margin: 0 0 0 10px;
+      position: relative;
+      text-transform: uppercase;
+      top: auto;
+      width: auto;
+  }
+
+  ul#zilla-mobile-menu ul.sub-menu li {
+    height: auto;
+    margin-top: 0;
+  }
+
+  ul#zilla-mobile-menu li:hover ul.sub-menu {
+      left: 0;
+      margin: 0 0 0 10px;
+      top: auto;
+  }
+
+  ul#zilla-mobile-menu ul li:hover ul.sub-menu { margin: 0 0 0 10px; }
+
+    #zilla-mobile-menu ul.sub-menu a { background: transparent; }
+
+    ul#zilla-mobile-menu li li:hover ul { left: auto; }
+
+}
+
+@media only screen and (max-width: 960px) {
+  /* 768 and under ------------------------------ */
+#disqus_thread {
+  margin-left: 0;
+padding: 0;
+}
+
+    #logo { padding-bottom: 3em; }
+
+    .header-inner,
+    #primary-nav,
+    #content,
+    .footer-inner { width: 100%; }
+
+  #content { padding: 0 10px; }
+
+    #primary,
+    .layout-2cl #primary {
+        float: left;
+        width: 100%;
+    }
+
+    .blog #primary { width: 100%; float: none; margin-left: 0; padding: 0 10px 0 0;}
+
+    .single #primary,
+    .page #primary,
+    .archive #primary,
+    .error404 #primary,
+    .search #primary {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 70%;
+  padding: 0 10px 0 0;
+margin-left: 0;
+    }
+
+    .search #primary,
+    .archive #primary,
+    .page-template-template-home-blog-php #primary,
+    .page-template-template-home-2col-php #primary { padding-bottom: 65px; }
+
+  .navigation { width: 620px; }
+
+    #sidebar .widget { width: 100%; }
+
+    .hentry { width: 100%; margin: 0; }
+
+    .single .hentry,
+    .archive .hentry,
+    .search .hentry,
+    .page .hentry,
+    .error404 .hfeed > div { width: 100%; }
+
+    .page-template-template-home-2col-php .hentry { width: 100%; }
+
+  .page-template-template-home-blog-php .flexslider .slides li { height: 435px; }
+
+  .single .zilla-direction-nav,
+  .archive .zilla-direction-nav,
+  .search .zilla-direction-nav,
+  .page-template-template-home-blog-php .zilla-direction-nav { width: 580px; }
+
+    .page-title {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #sidebar {
+        margin-bottom: 0;
+        padding-bottom: 1.25em;
+        width: 30%;
+    }
+
+    #comments { width: 100%; }
+
+    .blog .page-navigation { left: 255px; }
+
+    .footer-inner {
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .footer-inner > div { width: 30%; }
+
+    .footer-inner > p {
+        float: none;
+    }
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+    float: left;
+    margin-right: 20px;
+    width: 30%;
+}
+
+    .blog #load-more,
+    #load-more { width: 620px; }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog #primary { padding: 0 0 65px; width: 100%; float: none; margin-left: 0; }
+
+    .single #primary,
+    .page #primary,
+    .archive #primary,
+    .error404 #primary,
+    .search #primary { width: 100%;
+float: none; margin-left: 0; padding: 0;  }
+
+#sidebar {
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 1.25em;
+        width: 100%;
+    }
+
+    #sidebar .widget { width: 100%; }
+}
+
+@media only screen and (max-width: 640px) {
+#disqus_thread { padding: 5px; }
+  #content { padding: 0; }
+
+  .header-inner,
+    #primary-nav,
+    #content,
+    .footer-inner { width: 100%; }
+
+    #primary,
+    .layout-2cl #primary {
+        float: left;
+        width: 100%
+    }
+
+    .hentry { width: 100%; margin: 0; }
+
+    .single .hentry,
+    .archive .hentry,
+    .search .hentry,
+    .page .hentry,
+    .error404 .hfeed > div { width: 100%; }
+
+    .page-template-template-home-blog-php .post-thumb,
+    .archive .post-thumb,
+    .search .post-thumb { width: 260px; }
+
+    .single .zilla-direction-nav,
+  .archive .zilla-direction-nav,
+  .search .zilla-direction-nav,
+  .page-template-template-home-blog-php .zilla-direction-nav { width: 260px; }
+
+  .page-template-template-home-2col-php .navigation,
+  .blog .page-navigation { left: 30%; }
+
+  .navigation { width: 300px; }
+
+  .page-template-template-home-blog-php .flexslider .slides li { height: 195px !important; }
+
+  #comments { width: 100%; }
+
+    .comment > div { background: #fafafb; }
+
+    .bypostauthor > div { background: #22272D; }
+
+    .comment #respond { background: #fff; }
+
+    .comment #reply-title {
+        color: #22272d;
+        margin: 0;
+    }
+
+    .comment #commentform {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .comment-body {
+        margin: 0;
+        padding: 10px 10px .1em 10px;
+        width: 240px;
+    }
+
+    .comment-body::before,
+    .bypostauthor > div > .comment-body::before { border: none; }
+
+    .comment .avatar { display: none; }
+
+    .avatar-overlay { display: none; }
+
+    .children { margin-left: 20px; }
+
+    .children .comment-body {
+        margin-left: 0;
+        width: 220px;
+    }
+
+    .children .children { margin-left: 20px; }
+
+    .children .children .comment-body {
+        width: 190px;
+    }
+
+    #commentform input {
+        float: none;
+        width: 238px;
+    }
+
+    #commentform label,
+    #commentform .required { position: static; }
+
+    #commentform input[type="submit"] { width: 100%; }
+
+    #commentform textarea {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #contactForm input,
+    #contactForm textarea { width: 240px; }
+
+    #contactForm button { width: 100%; }
+
+    .page-title {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #comments { width: 100%; }
+
+    .blog .page-navigation { left: 255px; }
+
+    .footer-inner { padding-left: 0; }
+
+    .footer-inner > div { width: 100%; }
+
+    .footer-inner > p {
+        float: none;
+    }
+
+  .page-template-template-home-blog-php #load-more,
+  .page-template-template-home-2col-php #load-more,
+  .archive #load-more,
+  .search #load-more,
+  .blog #load-more,
+    #load-more { width: 300px; }
+
+    .zilla-one-half,
+  .zilla-one-third,
+  .zilla-two-third,
+  .zilla-one-fourth,
+  .zilla-three-fourth,
+  .zilla-one-fifth,
+  .zilla-two-fifth,
+  .zilla-three-fifth,
+  .zilla-four-fifth,
+  .zilla-one-sixth,
+  .zilla-five-sixth { width: 100% !important; }
+
+}
+
+@media only screen and (max-width: 320px) {
+  #logo a { font-size: 30px; }
+  #tagline { font-size: 12px; }
+}

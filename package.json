@@ -1,0 +1,11 @@
+{
+  "name": "thaume-blog",
+  "version": "0.0.0",
+  "description": "Assets of thau.me",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thaume",
+  "license": "MIT"
+}

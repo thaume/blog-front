@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------------*/
+/*  9. Page & Page Templates
+/*-----------------------------------------------------------------------------------*/
+
+.page .hentry { width: 620px; }
+
+.page-template-template-home-2col-php .hentry { width: 300px; }
+
+.page .archive-lists {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.page-template-template-home-blog-php .entry-meta-footer { padding: 1.25em 20px; }
+
+.page-template-template-home-blog-php .post-thumb {
+    margin: 1.25em 20px;
+    width: 580px;
+}
+
+.page-template-template-home-blog-php .navigation {
+    bottom: 0;
+    left: 40.5%;
+    position: absolute;
+    width: 130px;
+}
+
+.archive-lists ul {
+    margin-top: 0.625em;
+    margin-bottom: 1.875em;
+}
+
+.archive-lists li { list-style: disc; }
+
+.archive-lists .children { margin-bottom: 0; }
+
+.page-template-template-full-width-php .hentry {
+    margin: 0 0 2.5em;
+    width: 100%;
+}
+
+.contactform {
+    margin-left: 0;
+    overflow: hidden;
+}
+
+.contactform li { list-style-type: none; }
+
+.contactform li label {
+  display: block;
+  font-size: 0.875em;
+  margin-bottom: 0.625em;
+}
+
+.contactform li input[type="text"] {
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.contactform li textarea {
+  width: 96.206896551%;
+  height: 12.5em;
+  margin-bottom: 1em;
+}
+
+.contactform li button { float: right; }
+
+label.error { color: red; }
+
+

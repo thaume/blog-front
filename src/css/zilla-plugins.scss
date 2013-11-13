@@ -1,0 +1,267 @@
+/*-----------------------------------------------------------------------------------*/
+/*  10. Widgets
+/*-----------------------------------------------------------------------------------*/
+
+.widget {
+    border-bottom: 1px solid #ebebec;
+    margin: 1.875em 0 0 0;
+    padding: 0 20px 1.875em;
+}
+
+.widget:first-child { margin-top: 0; }
+
+.widget:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+
+#footer .widget { border-bottom: none; }
+
+.widget-title {
+  color: #2c2f32;
+  font-family: 'Patua One', Georgia, serif;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.widget ul { list-style-type: disc; }
+
+.widget > ul,
+.widget_nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.widget > ul ul.children,
+.widget_nav_menu .sub-menu {
+    list-style: none;
+    margin: 0 0 0 30px;
+}
+
+.widget > ul a,
+.widget > ul > li,
+.widget_nav_menu a {
+    background: #fafafb;
+    border: none;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    color: #414244;
+    display: block;
+    line-height: 1.5em;
+    margin-bottom: 0.35em;
+    padding: 0.35em 0.84em;
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -ms-transition: color .1s linear;
+    -o-transition: color .1s linear;
+    transition: color .1s linear;
+}
+
+.widget > ul a {
+    display: inline;
+    padding: 0;
+}
+
+.widget > ul a:hover,
+.widget_nav_menu a:hover {
+    text-decoration: none;
+    color: #ea4848;
+}
+
+.widget ol {
+  list-style-type: decimal;
+  margin-bottom: 0;
+}
+
+/* Recent Comments Widget ---------------------------------------------------*/
+.widget .recentcomments { margin-bottom: 0.625em; }
+
+.widget .recentcomments a {
+    background: none;
+    color: #ea4848;
+}
+
+.widget .recentcomments a:hover { text-decoration: underline; }
+
+/* Search Widget --------------------------------------------------------*/
+.widget_search #s { width: 200px; box-sizing: content-box; }
+
+.widget_search form,
+.widget_search fieldset { margin: 0; }
+
+/* Calander Widget -------------------------------------------------------*/
+.widget_calendar { font-size: 0.875em; }
+
+.widget_calendar caption {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.widget_calendar table { width: 100% }
+
+/* 125 x 125 Widget ------------------------------------------------------*/
+.zilla_ad_widget { padding-right: 0; }
+
+.ads-125 { margin-right: -10px; }
+
+.ads-125 a { border: none; }
+
+.ads-125 img {
+  margin: 0 10px 10px 0;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+            box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Twitter Widget -------------------------------------------------------*/
+
+.zilla-tweet-widget > ul {
+    margin: 0 0 10px 0;
+  list-style-type: none;
+}
+
+.zilla-tweet-widget > ul a {
+    background: none;
+    color: #ea4848;
+    display: inline;
+    line-height: inherit;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.zilla-tweet-widget > ul a:hover { text-decoration: underline; }
+
+.zilla-tweet-widget > ul li {
+    background: none;
+  border-top: 1px solid #efefef;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.zilla-tweet-widget > ul li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.zilla-tweet-widget li .twitter-time-stamp {
+    border-bottom: none;
+    display: block;
+    color: #A7A7A7;
+    font-size: 12px;
+}
+
+.zilla-tweet-widget li .twitter-time-stamp:hover { color: #ea4848; }
+
+.twitter-link {
+    background-color: #fcfcfc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f7f7f7));
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #f7f7f7);
+    background-image:    -moz-linear-gradient(top, #fcfcfc, #f7f7f7);
+    background-image:      -o-linear-gradient(top, #fcfcfc, #f7f7f7);
+    background-image:         linear-gradient(to bottom, #fcfcfc, #f7f7f7);
+    border: 1px solid #c4c4c4;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 2px #fff inset;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 1px 2px #fff inset;
+            color: #414244;
+  cursor: pointer;
+  font-family: 'Patua One', Georgia, serif;
+  line-height: 1em;
+  padding: 0.4em 10px;
+  text-shadow: 0 1px 0 #fff;
+  width: auto;
+}
+
+.twitter-link:hover {
+    background: #fff;
+    border-color: #969696;
+    text-decoration: none;
+}
+
+/* Flickr Widget --------------------------------------------------------*/
+.zilla_flickr_widget { padding-right: 0; }
+
+.zilla_flickr_widget > div {
+    margin-right: -20px;
+    padding-right: 10px;
+}
+
+.flickr_badge_image {
+  float: left;
+  margin: 0 10px 10px 0;
+  position: relative;
+  height: 56px;
+  width: 56px;
+}
+
+.flickr_badge_image a { cursor: pointer; }
+
+.flickr_badge_image span {
+    background: transparent url(images/sprite.png) 0 -100px no-repeat;
+    display: block;
+    height: 56px;
+    position: absolute;
+    width: 56px;
+}
+
+.flickr_badge_image img {
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.7);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+}
+
+.flickr_badge_image a:hover img,
+.flickr_badge_image img:hover { opacity: .8; }
+
+/* Video Widget ----------------------------------------------------------*/
+.zilla_video { margin-bottom: 10px; }
+
+
+/*----------------------------------------------------------------------------------*/
+/*  11. Zilla Plugins
+/*----------------------------------------------------------------------------------*/
+
+.zilla-tabs,
+.zilla-toggle { font-size: 14px; }
+
+/* ZillaSocial ---------------------------------------------------------*/
+
+.widget_zilla_social_widget .size-32px a {
+  border: none;
+  float: left;
+  margin: 0 4px 4px 0;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+.widget_zilla_social_widget .size-16px a {
+  float: left;
+  margin: 0 6px 5px 0;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
+.widget_zilla_social_widget .zilla-social a:hover {
+  background: none!important;
+  opacity: 0.5;
+}
+
+.zilla-social:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.zilla-social { display: inline-block; } /* Hide from IE Mac \*/
+
+.zilla-social { display: block; } /* End hide from IE Mac */
+

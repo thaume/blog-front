@@ -1,0 +1,233 @@
+<html lang="en-US" class="csstransforms csstransforms3d csstransitions">
+<head>
+
+  <base href="http://thau.me/2013/11/entering-the-world-of-sassc-and-bourbon-for-a-real-project/">
+
+  <!-- Meta Tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Title -->
+  <title>Intro to Libsass and bourbon, the C powered SASS wrapper</title>
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+<!-- END head -->
+<script type="text/javascript" async="" src="//thaume.disqus.com/embed.js?pname=wordpress&amp;pver=2.74"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><script type="text/javascript" src="//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic_tools.js" data-cfasync="false" async=""></script><link rel="stylesheet" type="text/css" href="//dsms0mj1bbhn4.cloudfront.net/assets/pub/share_buttons.css" id="share_buttons_css">
+
+</head>
+
+<!-- BEGIN body -->
+<body class="single single-post postid-31 single-format-standard logged-in admin-bar chrome post-entering-the-world-of-sassc-and-bourbon-for-a-real-project zilla layout-2cr customize-support" style="">
+
+  <!-- BEGIN #header -->
+  <div id="header">
+    <!-- BEGIN .header-inner -->
+    <div class="header-inner">
+
+      <!-- BEGIN #logo -->
+      <div id="logo">
+        <a href="http://thau.me">tom coquereau</a>
+        <p id="tagline">front end web developer · Paris</p>
+      <!-- END #logo -->
+      </div>
+
+      <!-- END .header-inner -->
+    </div>
+  <!-- END #header-->
+  </div>
+
+  <!-- BEGIN .main-navigation -->
+  <div class="main-navigation">
+    <!-- BEGIN #primary-nav -->
+    <div id="primary-nav">
+      <ul id="primary-menu" class="sf-menu sf-js-enabled">
+        <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-18"><a href="http://thau.me/">Home</a></li>
+      </ul>
+      <!-- BEGIN #searchform-->
+      <form method="get" id="searchform" action="http://thau.me/">
+        <fieldset>
+          <input type="text" name="s" id="s">
+        </fieldset>
+      <!-- END #searchform-->
+      </form>
+      <!-- END #primary-nav -->
+    </div>
+  </div><!-- END .main-navigation -->
+
+  <!-- BEGIN #content -->
+  <div id="content" class="clearfix">
+    <!-- BEGIN #primary .hfeed-->
+    <div id="primary" class="hfeed">
+      <!-- BEGIN .hentry -->
+      <div class="post-31 post type-post status-publish format-standard hentry category-css-2 tag-css tag-grunt tag-sass tag-workflow" id="post-31">
+        <h1 class="entry-title">Entering the world of SASSC and bourbon for a real project</h1>
+
+        <!-- BEGIN .entry-meta-header-->
+        <div class="entry-meta-header">
+            <span class="published">November 5, 2013</span>
+            <span class="edit-post">[<a class="post-edit-link" href="http://thau.me/wp-admin/post.php?post=31&amp;action=edit">edit</a>]</span><!-- END .entry-meta-header -->
+        </div>
+
+
+        <!-- BEGIN .entry-content -->
+        <div class="entry-content">
+          <p>We are all starting to ‘build’ our front-end resources. Some of us pre-compile Handlebars templates, some minify images&nbsp;and I even heard that some deal with <a title="cache-busting" href="https://github.com/jgallen23/grunt-hash">cache-busting</a>. We run all of those tasks thanks to this amazing tool called ‘Grunt’ that keeps on revolutionizing the front-end way of building websites.</p>
+          <p>Of course&nbsp;we both want to run these build tasks and use livereload to design in the browser. For a nice developer-experience, it needs to run&nbsp;<strong>fast</strong>.</p>
+          <p>Most of these tasks are okay in terms of speed, but when your Sass/Compass project reaches 4000 lines, you start to have performance issues (at the compile step and not in the css generated, this is another story).</p>
+          <p>I reached those 4000 lines of code on a project I was working on earlier this year. It took around 5 seconds to compile the scss files with compass. One of the guy working with me on the project (<a title="Damian twitter" href="https://twitter.com/damln">@damln</a>) told me about this new Sass built with C, it sounded really sassy.</p>
+          <p>At that point, I met <a title="Libsass on github" href="https://github.com/hcatlin/libsass">Libsass</a>&nbsp;(it’s a good guy)</p>
+          <p><a title="libsass website" href="http://libsass.org/"><img class="size-full wp-image-38 aligncenter" alt="libsass-logo" src="http://thau.me/wp-content/uploads/2013/11/libsass-logo.png" width="320" height="160"></a></p>
+          <h2>Enter libsass and Bourbon</h2>
+          <p>I then started a complete re-factoring of the code using Bourbon as my ‘mixins-provider’ and building the scss with Libsass wrapped in a grunt-task (<a title="grunt-sass on github" href="https://github.com/sindresorhus/grunt-sass">grunt-sass</a>, and not grunt-contrib-sass which is based on the ruby version). The good thing about Bourbon is that their mixins are w3c compliant (something not absolutely true in compass) and they drop support for vendor-prefix at a good pace depending on each feature, your css is cleaner and up to date !</p>
+          <p>Dropping Compass for Bourbon was already a big win, the scss compile time went from 5 sec to around 2 sec.</p>
+          <h3>So how does that look like ?</h3>
+          <p>Compilation with <strong>sass</strong> without compass (the ruby version) :</p>
+          <p><a href="http://thau.me/wp-content/uploads/2013/11/sass_compile.png"><img class="alignnone size-full wp-image-71" alt="sass_compile" src="http://thau.me/wp-content/uploads/2013/11/sass_compile.png" width="563" height="20"></a></p>
+          <p>Compilation with <strong>sassc</strong> (the C version) :</p>
+          <p><img class="alignnone size-full wp-image-72" alt="sassc_compile" src="http://thau.me/wp-content/uploads/2013/11/sassc_compile.png" width="562" height="20"></p>
+          <p>We came from 2290 ms to 288 ms ! This is a <strong>huge</strong> win for people who love to design in the browser.</p>
+          <h3>What about the cons ?</h3>
+          <p>If you look around in the github repos of libsass, grunt-sass&nbsp;or node-sass, you will find out that some features are missing or partially implemented. For instance, you won’t be able to take advantage of the nested @extend rules <a title="nested @extend issue thread" href="https://github.com/hcatlin/libsass/issues/159">yet</a> (the single class @extend works thought), source-maps are in the <a title="Source map support thread" href="https://github.com/hcatlin/libsass/issues/122%23issuecomment-21885955">pipe</a> but not there yet either.</p>
+          <p>Considering that, I never really had a blocking problem with libsass and it is 100% compatible with bourbon&nbsp;and&nbsp;<a title="bootstrap-sass on github" href="https://github.com/thomas-mcdonald/bootstrap-sass">bootstrap-sass</a>. You sometimes might have to use some tricks to compile some old properties like this one :&nbsp;</p><pre class=" language-scss"><code class=" language-scss"><span class="token selector">.identifiant </span><span class="token punctuation">{</span>
+          <span class="token property">filter</span><span class="token punctuation">:</span> alpha(opacity=50)<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token comment" spellcheck="true">/* To make the compilation pass */</span><span class="token selector">.identifiant </span><span class="token punctuation">{</span>
+          <span class="token property">filter</span><span class="token punctuation">:</span> unquote(<span class="token string">"alpha(opacity=50);"</span>)<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span></code></pre><p></p>
+          <p>You will get all the assistance you need on the issue thread of the github repo dealing with libsass.</p>
+          <h2>Hold your breath and…</h2>
+          <p>Try libsass ! Installing the binaries is pretty easy (explanations <a title="sassc on github" href="https://github.com/hcatlin/sassc">here</a>) and you can just try it with the grunt task :&nbsp;</p><pre class=" language-bash"><code class=" language-bash">npm install grunt<span class="token operator">-</span>sass</code></pre><p></p>
+          <p>and then add the task to your project gruntfile, like in this example : <a title="grunt-sass example" href="https://github.com/thaume/sassc-test">grunt-sass example</a></p>
+          <p>There are some rumors in the wild talking about a real-time reload <a title="takana on beta" href="http://usetakana.com/">tool</a> too, you should give it a shot !</p>
+          <p>The roadmap of libsass is moving toward a 1:1 equivalence&nbsp;with the ruby version, and it is already looking pretty good, using libsass is something really refreshing !</p>
+          <blockquote><p>Thanks <a title="Damian twitter" href="https://twitter.com/damln">@damln</a>&nbsp;for sharing your knowledge on libsass <img src="http://thau.me/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+          <p><a title="geeksters web agency" href="http://geeksters.co">geeksters.co</a></p></blockquote>
+        </div><!-- BEGIN .entry-meta-footer-->
+
+        <div class="entry-meta-footer">
+          <span class="comment-count">Comments: <a href="http://thau.me/2013/11/entering-the-world-of-sassc-and-bourbon-for-a-real-project/#respond" title="Comment on Entering the world of SASSC and bourbon for a real project"><span class="dsq-postid" rel="31 http://thau.me/?p=31">0</span></a></span>
+          <span class="author">Posted by: <a href="http://thau.me/author/thaumesylvere/" title="Posts by Tom" rel="author">Tom</a></span>
+          <span class="entry-categories">Categories: <a href="http://thau.me/category/css-2/" title="View all posts in CSS" rel="category tag">CSS</a></span>
+          <span class="entry-tags">Tags: <a href="http://thau.me/tag/css/" rel="tag">css</a>, <a href="http://thau.me/tag/grunt/" rel="tag">grunt</a>, <a href="http://thau.me/tag/sass/" rel="tag">sass</a>, <a href="http://thau.me/tag/workflow/" rel="tag">workflow</a></span>
+        <!-- END .entry-meta-footer-->
+        </div>
+      <!-- END .hentry-->
+      </div>
+
+      <!-- BEGIN .navigation .single-page-navigation -->
+      <div class="navigation single-page-navigation">
+        <div class="nav-previous"></div>
+        <div class="nav-next"></div>
+      <!-- END .navigation .single-page-navigation -->
+      </div>
+
+    <!-- END #primary .hfeed-->
+    </div>
+
+
+    <!-- BEGIN #sidebar .aside-->
+    <div id="sidebar" class="aside">
+      <div id="search-2" class="widget widget_search"><!-- BEGIN #searchform-->
+        <form method="get" id="searchform" action="http://thau.me/">
+          <fieldset>
+            <input type="text" name="s" id="s">
+          </fieldset>
+        <!-- END #searchform-->
+        </form>
+      </div>
+      <div id="recent-posts-2" class="widget widget_recent_entries">
+        <h3 class="widget-title">Recent posts</h3>
+        <ul>
+          <li><a href="http://thau.me/2013/11/entering-the-world-of-sassc-and-bourbon-for-a-real-project/">Entering the world of SASSC and bourbon for a real project</a><span class="post-date">November 5, 2013</span></li>
+        </ul>
+      </div>
+      <div id="tag_cloud-3" class="widget widget_tag_cloud">
+        <h3 class="widget-title">Categories</h3>
+        <div class="tagcloud"><a href="http://thau.me/category/css-2/" class="tag-link-10" title="1 topic" style="font-size: 8pt;">CSS</a></div>
+      </div>
+      <div id="tag_cloud-2" class="widget widget_tag_cloud">
+        <h3 class="widget-title">Tags</h3>
+        <div class="tagcloud">
+          <a href="http://thau.me/tag/css/" class="tag-link-7" title="1 topic" style="font-size: 8pt;">css</a>
+          <a href="http://thau.me/tag/grunt/" class="tag-link-9" title="1 topic" style="font-size: 8pt;">grunt</a>
+          <a href="http://thau.me/tag/sass/" class="tag-link-6" title="1 topic" style="font-size: 8pt;">sass</a>
+          <a href="http://thau.me/tag/workflow/" class="tag-link-8" title="1 topic" style="font-size: 8pt;">workflow</a>
+        </div>
+      </div>
+    <!-- END #sidebar .aside-->
+    </div>
+  <!-- END #content -->
+  </div>
+
+
+  <!-- BEGIN #footer -->
+  <div id="footer">
+
+    <!-- BEGIN .footer-inner -->
+    <div class="footer-inner">
+      <!-- BEGIN .footer-col-1 -->
+      <div class="footer-col-1">
+        <div id="text-2" class="widget widget_text">
+          <h3 class="widget-title">about me</h3>
+          <div class="textwidget">
+            My name is Tom Coquereau, I work as a front-end developer @viadeo.com in Paris.
+            <br><br>
+            Technologies enthusiast, web passionate and always willing to learn more in my areas of interest I am making my way in the SaaS world to provide the best front-end solutions possible.
+            <br><br>
+            Any cool project in the pipe ? Get in touch !</div>
+          </div>
+      <!-- END .footer-col-1 -->
+      </div>
+
+      <!-- BEGIN .footer-col-2 -->
+      <div class="footer-col-2">
+
+        <div id="zilla-twitter-widget-2" class="widget zilla-tweet-widget">
+          <h3 class="widget-title">Latest tweets</h3><ul><li>I just pushed a new article about Libsass and Bourbon : <a href="http://t.co/pvWpSr0tY9" target="_blank">http://t.co/pvWpSr0tY9</a><a class="twitter-time-stamp" href="http://twitter.com/thaume/status/398166044713308161">06 Nov 2013</a></li><li><a href="http://twitter.com/@LeaVerou" target="_blank">@LeaVerou</a> if you are in China they will post it back, otherwise they should give you a date to pick it up<a class="twitter-time-stamp" href="http://twitter.com/thaume/status/391112450528911360">18 Oct 2013</a></li><li>Thanks <a href="http://twitter.com/@FronteersConf" target="_blank">@FronteersConf</a> for this amazing conference ! See you in one year !<a class="twitter-time-stamp" href="http://twitter.com/thaume/status/389019518577565696">12 Oct 2013</a></li></ul><a class="twitter-link" href="http://twitter.com/thaume">Follow me on twitter</a></div>
+        <!-- END .footer-col-2 -->
+        </div>
+
+        <!-- BEGIN .footer-col-3 -->
+        <div class="footer-col-3">
+
+        <div id="zilla_social_widget-2" class="widget widget_zilla_social_widget">
+          <h3 class="widget-title">Social links</h3><div class="zilla-social size-32px"><a href="mailto:tom@thau.me" class="Mail" target="_blank"><img src="http://thau.me/wp-content/plugins/zilla-social/images/32px/Mail.png" alt="Mail"></a> <a href="https://github.com/thaume" class="GitHub" target="_blank"><img src="http://thau.me/wp-content/plugins/zilla-social/images/32px/GitHub.png" alt="GitHub"></a> <a href="https://plus.google.com/106353759831563202307" class="Google+" target="_blank"><img src="http://thau.me/wp-content/plugins/zilla-social/images/32px/Google+.png" alt="Google+"></a> <a href="http://www.linkedin.com/in/thaume" class="LinkedIn" target="_blank"><img src="http://thau.me/wp-content/plugins/zilla-social/images/32px/LinkedIn.png" alt="LinkedIn"></a> <a href="http://twitter.com/taume" class="Twitter" target="_blank"><img src="http://thau.me/wp-content/plugins/zilla-social/images/32px/Twitter.png" alt="Twitter"></a> </div></div>
+        <!-- END .footer-col-3 -->
+        </div>
+
+      <!-- END .footer-inner -->
+      </div>
+
+      <div class="footer-lower">
+        <div class="footer-inner">
+          <p class="copyright">© Copyright 2013. Powered by <a href="http://wordpress.org/">WordPress</a></p>
+        </div>
+      </div>
+
+    <!-- END #footer -->
+    </div>
+
+    <a href="#" id="back-to-top"></a>
+
+
+
+  <!-- Theme Hook -->
+  <script type="text/javascript">
+    (function() {
+      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+      request = true;
+
+      b[c] = b[c].replace( rcs, ' ' );
+      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+    }());
+  </script>
+  <!-- Ran 42 queries 0.10 seconds -->
+<!-- END body-->
+
+<!-- END html-->
+</body></html>

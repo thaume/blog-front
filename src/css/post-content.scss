@@ -1,0 +1,197 @@
+/*-----------------------------------------------------------------------------------*/
+/*  5.  Post Content Styles
+/*-----------------------------------------------------------------------------------*/
+
+.hentry,
+.error404 .hfeed > div {
+    background: #fff;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    float: left;
+    margin: 0 10px 1.429em;
+    width: 300px;
+}
+
+.single .hentry,
+.error404 .hfeed > div {
+    margin-bottom: 2.5em;
+    width: 620px;
+}
+
+.archive .hentry,
+.search .hentry { width: 620px; }
+
+.entry-content { margin: 1.5em 20px; }
+
+/* Quote & Link format */
+.entry-quote,
+.entry-link {
+    background: #ea4848;
+    color: #fff;
+    font-family: 'Patua One', Georgia, serif;
+    margin: 1.429em 20px;
+    padding: 1.429em 20px;
+    position: relative;
+}
+
+.entry-quote::after {
+    bottom: 0;
+    content: '”';
+    font-size: 2em;
+    line-height: 1em;
+    position: absolute;
+    right: 20px;
+}
+
+.entry-quote .quote-source,
+.entry-link .link-url {
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 0;
+}
+
+.format-quote > a:hover .entry-quote { background: #2c2f32; }
+
+.format-quote > a:hover { text-decoration: none; }
+
+.entry-link { background: #2c2f32; }
+
+.entry-link h2 { text-align: center; }
+
+.entry-link a { color: #fff; }
+
+.entry-link a:hover {
+    text-decoration: none;
+    color: #ea4848;
+}
+
+.entry-meta-header {
+    color: #A7A7A7;
+    font-size: 12px;
+    margin: 0 1.667em;
+}
+
+.entry-meta-footer {
+    background: #fbfbfb;
+    border-top: 1px solid #ebebec;
+    -webkit-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+    clear: left;
+  color: #414244;
+  font-size: 12px;
+  overflow: hidden;
+    padding: 1.6em 20px;
+    line-height: 1.7em;
+}
+
+.entry-meta-footer span {
+    display: block;
+    font-weight: bold;
+}
+
+.entry-meta-footer a {
+    color: #414244;
+    font-weight: normal;
+}
+
+.entry-meta-footer a:hover {
+    text-decoration: none;
+    color: #ea4848;
+}
+
+.entry-meta-footer .zilla-likes {
+  margin-bottom: -1.75em !important;
+  margin-top: 0.5em !important;
+}
+
+.entry-meta-footer .zilla-likes:hover,
+.entry-meta-footer .zilla-likes.active {
+  margin-bottom: -1.75em !important;
+  margin-top: 0.5em !important;
+}
+
+.entry-meta-footer .zilla-likes span {
+    display: inline;
+    font-weight: normal;
+}
+
+.entry-content .zilla-likes span { font-size: 0.875em; }
+
+.author-bio {
+  padding: 20px;
+  background: #fbfbfb;
+  border: 1px solid #efefef;
+}
+
+.author-bio .avatar {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.author-title {
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.author-description { margin-left: 60px; }
+
+.entry-content ul { list-style-type: disc; }
+
+.entry-content ol { list-style-type: decimal; }
+
+.sticky {}
+
+/* Isotope ---------------------------------------*/
+.isotope-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/* disabling Isotope CSS3 transitions */
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+
