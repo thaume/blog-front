@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "thaume",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "0.2.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+
+    "grunt-hash": "~0.2.3",
+    "grunt-sass": "~0.7.0",
+    "grunt-contrib-imagemin": "~0.3.0"
+  }
 }

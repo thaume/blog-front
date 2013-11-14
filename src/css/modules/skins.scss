@@ -9,26 +9,26 @@
 
 /* Prisme 6/11/13 */
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
-margin: 0;
+  margin: 0;
 }
 /* Tagcloud 6/11/13 */
 #sidebar .tagcloud a {
-float: left;
-display: block;
-margin-bottom: 4px;
-margin-right: 4px;
-background: #f26c4f;
-padding: 5px 10px;
-font-family: 'Patua One', Georgia, serif;
-font-size: 13px !important;
-line-height: 1.4em !important;
-color: #fff !important;
-text-decoration: none;
-font-weight: 300;
-letter-spacing: 1px;
--webkit-transition: all .4s ease-out;
--moz-transition: all .4s linear;
-transition: all .4s linear;
+  float: left;
+  display: block;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  background: #f26c4f;
+  padding: 5px 10px;
+  font-family: 'Patua One', Georgia, serif;
+  font-size: 13px !important;
+  line-height: 1.4em !important;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s linear;
+  transition: all .4s linear;
 }
 #sidebar .tagcloud {
   *zoom:1;

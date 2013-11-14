@@ -21,11 +21,11 @@
   9.  Page & Page Templates
   10. Widgets
   11. Zilla Plugins
-  12. Little screens
+  12. Media queries
 
 -----------------------------------------------------------------------------------*/
 
-/* Get a real font, not an http call */
+/* TODO : Get a real font, not an http call */
 @import url(http://fonts.googleapis.com/css?family=Patua+One);
 
 @import "modules/reset";
@@ -40,7 +40,7 @@
 @import "modules/footer";
 @import "modules/page";
 
-@import "modules/zilla-plugins";
+@import "modules/widgets";
 @import "modules/skins";
 
 @import "modules/media-queries";
